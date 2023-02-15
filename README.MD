@@ -16,9 +16,12 @@ If you want to run this outside of Docker, you will need to have at least NodeJS
 
 ### Node(v16+):
 
-Create a .env folder to contain your bot token in the root dir.
-CLIENT_TOKEN=yourtoken
+Create a .env file to contain your bot token in the root dir.
 
+```bash
+.env
+CLIENT_TOKEN=yourtoken
+```
 Run:
 
 ```bash
