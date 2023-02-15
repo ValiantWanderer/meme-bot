@@ -13,7 +13,7 @@ const client = new Client({
 
 client.on('ready', ()=> {
     console.log(`Logged in as ${client.user.tag}!`);
-    client.channels.cache.get(`1072268800398991450`).send(`Hellooo from the new improved version!`)
+    client.channels.cache.get(`1072268800398991450`).send(`Woohoo!`)
 
 });
 
