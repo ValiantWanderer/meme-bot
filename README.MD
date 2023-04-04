@@ -21,6 +21,7 @@ Create a .env file to contain your bot token in the root dir.
 ```bash
 .env
 CLIENT_TOKEN=yourtoken
+CHANNEL_NAME=channel name used by bot welcome message
 ```
 Run:
 
@@ -32,7 +33,7 @@ node index.js
 Either build with the dockerfile or pull the latest version of the built image from Dockerhub.
 
 ```bash
-docker run -d -e CLIENT_TOKEN=yourtoken cx00/meme
+docker run -d -e CLIENT_TOKEN=yourtoken -e CHANNEL_NAME=general cx00/meme
 ```
 
 ## Usage
