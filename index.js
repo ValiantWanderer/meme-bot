@@ -2,6 +2,7 @@ require('dotenv').config();
 const axios = require('axios');
 const { Client, GatewayIntentBits, ApplicationCommandPermissionType } = require('discord.js');
 const token = process.env.CLIENT_TOKEN;
+const channelName = process.env.CHANNEL_NAME;
 
 const client = new Client({
     intents: [
@@ -10,8 +11,6 @@ const client = new Client({
         GatewayIntentBits.MessageContent
     ]
 });
-
-const channelName = "general-chatz";
 
 client.on('ready', ()=> {
     console.log(`Logged in as ${client.user.tag}!`);
