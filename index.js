@@ -11,9 +11,12 @@ const client = new Client({
     ]
 });
 
+const channelName = "general-chatz";
+
 client.on('ready', ()=> {
     console.log(`Logged in as ${client.user.tag}!`);
-    client.channels.cache.get(`1072268800398991450`).send(`Woohoo hello!`)
+    //client.channels.cache.get(`1072268800398991450`).send(`Woohoo hello!`)
+    client.channels.cache.find(channel => channel.name === channelName).send(`Yea boi`)
 
 });
 
@@ -29,9 +32,9 @@ client.on('messageCreate', async (message) => {
         })     
         .then( () => {
             client.login(token);
-            client.channels.cache.get(`1072268800398991450`).send(`Oh wait I can't die...`)
         })
     }
+
 });
 
 async function getMeme(){
